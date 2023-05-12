@@ -1,0 +1,98 @@
+.wrapper {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 100vw;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 0 0 4px #fbf2be;
+}
+
+.container {
+    padding: var(--wrapper-padding);
+    width: 100%;
+    max-width: 1100px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    height: 50px;
+    object-fit: contain;
+}
+
+.mobile-menu {
+    position: relative;
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    width: 238px;
+    background: var(--primary);
+    top: 140%;
+    left: 58px;
+    height: auto;
+    transition: all 0.3s;
+    padding: 10px 4px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #999;
+
+    &::after {
+        position: absolute;
+        content: '';
+        background: var(--primary);
+        width: 20px;
+        height: 20px;
+        top: -8px;
+        right: 10%;
+        transform: rotate(45deg);
+    }
+}
+
+.menu.show {
+    animation: show 0.3s ease-in forwards;
+}
+
+.menu.hidden {
+    animation: hidden 0.3s ease-out forwards;
+}
+
+.menu-item {
+    .item {
+        width: 100%;
+        background-color: inherit;
+        transition: 0.5s;
+    }
+
+    .item.active {
+        background-color: var(--green);
+        color: var(--green-light);
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        left: -180px;
+    }
+}
+
+@keyframes hidden {
+    from {
+        left: -180;
+    }
+    to {
+        opacity: 0;
+        left: 58px;
+    }
+}

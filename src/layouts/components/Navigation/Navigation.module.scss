@@ -1,0 +1,30 @@
+:root {
+    --height: 50px;
+}
+.wrapper {
+    position: fixed;
+    top: 60px;
+    transform: translateY(0);
+    z-index: 2;
+    width: 100vw;
+    height: var(--height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to top, var(--primary), var(--gold-light));
+    transition: all 0.5s;
+    &.hidden {
+        transform: translateY(-60px);
+    }
+
+    &.show {
+        transform: translateY(0);
+    }
+}
+
+// Mobile
+@media screen and (max-width: 740px) {
+    .navigation {
+        display: none;
+    }
+}

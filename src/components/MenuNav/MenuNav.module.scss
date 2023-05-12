@@ -1,0 +1,45 @@
+.menu {
+    display: grid;
+    max-width: 1100px;
+    grid-template-columns: repeat(4, calc(100% / 4));
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+    list-style: none;
+    color: var(--text-white);
+    margin: auto;
+    text-transform: uppercase;
+
+    .menu-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: var(--height);
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s;
+    }
+
+    .item {
+        width: 100%;
+        background-color: inherit;
+        transition: 0.5s;
+    }
+
+    .item.active {
+        background-color: var(--green);
+        color: var(--green-light);
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .phone {
+        display: none;
+    }
+
+    .menu-bar {
+        display: block;
+    }
+}

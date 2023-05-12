@@ -1,0 +1,47 @@
+@import 'normalize.css';
+
+:root {
+    --green: #2f9931;
+    --green-light: #bbffbd;
+    --primary: #c48f2e;
+    --gold-light: #e5ad42;
+    --gold-dark: #a07118;
+    --text-white: #fff;
+    --text-black: #444;
+
+    --wrapper-padding: 0 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Roboto, Sans-serif;
+    font-size: 1.6rem;
+    color: var(--text-black);
+}
+
+.background-img {
+    z-index: -999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-bg {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+}

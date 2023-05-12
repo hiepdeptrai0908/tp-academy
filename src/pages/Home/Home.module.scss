@@ -1,0 +1,155 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1100px;
+    margin-top: 90px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.banner {
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 70px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+.info-col-2 {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 40px;
+}
+
+.info-content {
+    display: block;
+    width: auto;
+}
+
+.content-headding {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.content-text {
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.info-image {
+    width: calc(100% - 40px);
+    border-radius: 20px;
+}
+
+.col-3 {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+}
+
+.col-item {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.col-item-img {
+    width: 50%;
+    padding: 20px;
+}
+
+.col-item-headding {
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.col-item-text {
+    text-align: justify;
+}
+
+.img-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-col {
+    width: 50%;
+
+    &:first-child {
+        transform: translateX(1px);
+    }
+}
+
+.btn {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+// responsive
+@media screen and (max-width: 740px) {
+    .wrapper {
+        padding-top: 0;
+        margin-top: 60px;
+    }
+
+    .banner {
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: 20px;
+    }
+
+    .info-col-2 {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 10px;
+    }
+
+    .info-image {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .col-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .col-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-col {
+        width: 100%;
+
+        &:first-child {
+            transform: translateX(0);
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

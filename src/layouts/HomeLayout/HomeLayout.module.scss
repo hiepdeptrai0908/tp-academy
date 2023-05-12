@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    height: 100vw;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    background: #ffffffb0;
+    padding: var(--wrapper-padding);
+    min-height: 200vh;
+}
