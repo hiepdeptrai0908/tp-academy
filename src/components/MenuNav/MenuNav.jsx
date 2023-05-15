@@ -26,8 +26,8 @@ function MenuNav() {
             </div>
             <div className={cx('menu-item')}>
                 <Button
-                    to={configRouters.addMission}
-                    className={cx('item', pathActive === configRouters.addMission ? 'active' : '')}
+                    to={configRouters.page1}
+                    className={cx('item', pathActive.includes(configRouters.addMission) ? 'active' : '')}
                     textWhite
                     leftIcon={<FontAwesomeIcon icon={faGraduationCap} />}
                 >

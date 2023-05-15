@@ -1,15 +1,27 @@
 import HomeLayout from '~/layouts/HomeLayout'
+import SidebarLayout from '~/layouts/SidebarLayout'
 
 import Home from '~/pages/Home'
-import Addmission from '~/pages/Addmission'
+import Page1 from '~/pages/addmission/Page1'
+import Page2 from '~/pages/addmission/Page2'
+import Page3 from '~/pages/addmission/Page3'
+import Page4 from '~/pages/addmission/Page4'
+import Page5 from '~/pages/addmission/Page5'
+import Page6 from '~/pages/addmission/Page6'
 import Blog from '~/pages/Blog'
 import Contact from '~/pages/Contact'
+import configRouters from '~/config/router'
 
 const publicRouters = [
-    { path: '/', component: Home, layout: HomeLayout },
-    { path: '/thong-tin-tuyen-sinh', component: Addmission, layout: HomeLayout },
-    { path: 'blog', component: Blog, layout: HomeLayout },
-    { path: '/lien-he', component: Contact, layout: HomeLayout },
+    { path: configRouters.home, component: Home, layout: HomeLayout },
+    { path: configRouters.page1, component: Page1, layout: SidebarLayout },
+    { path: configRouters.page2, component: Page2, layout: SidebarLayout },
+    { path: configRouters.page3, component: Page3, layout: SidebarLayout },
+    { path: configRouters.page4, component: Page4, layout: SidebarLayout },
+    { path: configRouters.page5, component: Page5, layout: SidebarLayout },
+    { path: configRouters.page6, component: Page6, layout: SidebarLayout },
+    { path: configRouters.blog, component: Blog, layout: HomeLayout },
+    { path: configRouters.contact, component: Contact, layout: HomeLayout },
 ]
 
 export default publicRouters

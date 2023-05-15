@@ -95,8 +95,11 @@ function Header() {
                             <div className={cx('menu-item')}>
                                 <Button
                                     navLink
-                                    to={configRouters.addMission}
-                                    className={cx('item', pathActive === configRouters.addMission ? 'active' : '')}
+                                    to={configRouters.page1}
+                                    className={cx(
+                                        'item',
+                                        pathActive.includes(configRouters.addMission) ? 'active' : '',
+                                    )}
                                     textWhite
                                     base
                                     full
