@@ -9,6 +9,7 @@
     color: var(--text-white);
     margin: auto;
     text-transform: uppercase;
+    padding: var(--wrapper-padding);
 
     .menu-item {
         display: flex;
