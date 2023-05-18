@@ -8,6 +8,10 @@ const cx = classNames.bind(styles)
 function Sidebar() {
     const path = useLocation()
     const pathActive = path.pathname
+
+    console.log(configRouters.page3)
+    console.log(pathActive)
+    console.log(configRouters.page3.includes(pathActive))
     return (
         <div className={cx('sidebar')}>
             <div className={cx('category')}>Danh mục</div>
@@ -25,7 +29,7 @@ function Sidebar() {
             </Link>
             <Link
                 to={configRouters.page3}
-                className={cx('category-item', pathActive === configRouters.page3 ? 'active' : '')}
+                className={cx('category-item', pathActive.includes(configRouters.page3) ? 'active' : '')}
             >
                 Kỹ năng đặc định (特定技能)
             </Link>
@@ -33,19 +37,7 @@ function Sidebar() {
                 to={configRouters.page4}
                 className={cx('category-item', pathActive === configRouters.page4 ? 'active' : '')}
             >
-                Du học Hàn Quốc
-            </Link>
-            <Link
-                to={configRouters.page5}
-                className={cx('category-item', pathActive === configRouters.page5 ? 'active' : '')}
-            >
-                Du học Đức
-            </Link>
-            <Link
-                to={configRouters.page6}
-                className={cx('category-item', pathActive === configRouters.page6 ? 'active' : '')}
-            >
-                Du học Canada
+                Du học Hàn - Đức - Canada
             </Link>
         </div>
     )

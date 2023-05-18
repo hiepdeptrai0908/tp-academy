@@ -14,6 +14,7 @@ const images = {
     icon3: require('~/assets/images/ho-tro-DHS-1.png'),
     icon4: require('~/assets/images/quy-trinh-1.png'),
     icon5: require('~/assets/images/quy-trinh-2.png'),
+    imageTuyenSinh: require('~/assets/images/thong-tin-tuyen-sinh-ks.jpeg'),
 }
 
 export default images
